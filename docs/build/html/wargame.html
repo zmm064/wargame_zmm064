@@ -1,0 +1,491 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>wargame package &#8212; wargame 2.1.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '2.1.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="wargame-package">
+<h1>wargame package<a class="headerlink" href="#wargame-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-wargame.abstractgameunit">
+<span id="wargame-abstractgameunit-module"></span><h2>wargame.abstractgameunit module<a class="headerlink" href="#module-wargame.abstractgameunit" title="Permalink to this headline">¶</a></h2>
+<p>wargame.abstractgameunit</p>
+<p>This module contains the AbstractGameUnit class implementation.</p>
+<p>This module is compatible with Python 3.5.x. It contains
+supporting code for the book, Learning Python Application Development,
+Packt Publishing.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">copyright:</th><td class="field-body">2016, Ninad Sathaye</td>
+</tr>
+<tr class="field-even field"><th class="field-name">license:</th><td class="field-body">The MIT License (MIT) . See LICENSE file for further details.</td>
+</tr>
+</tbody>
+</table>
+<dl class="class">
+<dt id="wargame.abstractgameunit.AbstractGameUnit">
+<em class="property">class </em><code class="descclassname">wargame.abstractgameunit.</code><code class="descname">AbstractGameUnit</code><span class="sig-paren">(</span><em>name=''</em><span class="sig-paren">)</span><a class="headerlink" href="#wargame.abstractgameunit.AbstractGameUnit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Abstract class to represent a game character (or a &#8216;unit&#8217;)</p>
+<dl class="method">
+<dt id="wargame.abstractgameunit.AbstractGameUnit.attack">
+<code class="descname">attack</code><span class="sig-paren">(</span><em>enemy</em><span class="sig-paren">)</span><a class="headerlink" href="#wargame.abstractgameunit.AbstractGameUnit.attack" title="Permalink to this definition">¶</a></dt>
+<dd><p>The main logic to &#8216;attack&#8217; the enemy unit</p>
+<p>Determines injured unit and the amount of injury</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="wargame.abstractgameunit.AbstractGameUnit.heal">
+<code class="descname">heal</code><span class="sig-paren">(</span><em>heal_by=2</em>, <em>full_healing=True</em><span class="sig-paren">)</span><a class="headerlink" href="#wargame.abstractgameunit.AbstractGameUnit.heal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Heal the unit replenishing its hit points</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="wargame.abstractgameunit.AbstractGameUnit.info">
+<code class="descname">info</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#wargame.abstractgameunit.AbstractGameUnit.info" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print information about this game unit.</p>
+<p>Abstract method. See subclasses for implementation.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="wargame.abstractgameunit.AbstractGameUnit.reset_health_meter">
+<code class="descname">reset_health_meter</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#wargame.abstractgameunit.AbstractGameUnit.reset_health_meter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reset the <cite>health_meter</cite> (assign default hit points)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="wargame.abstractgameunit.AbstractGameUnit.show_health">
+<code class="descname">show_health</code><span class="sig-paren">(</span><em>bold=False</em>, <em>end='\n'</em><span class="sig-paren">)</span><a class="headerlink" href="#wargame.abstractgameunit.AbstractGameUnit.show_health" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print info on the current health reading of this game unit</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-wargame.attackoftheorcs">
+<span id="wargame-attackoftheorcs-module"></span><h2>wargame.attackoftheorcs module<a class="headerlink" href="#module-wargame.attackoftheorcs" title="Permalink to this headline">¶</a></h2>
+<p>wargame.attackoftheorcs</p>
+<p>This module contains the AttackOfTheOrcs class implementation.</p>
+<p>This is the main class with the high level logic to play Attack of the Orcs
+game.</p>
+<p>This module is compatible with Python 3.5.x. It contains
+supporting code for the book, Learning Python Application Development,
+Packt Publishing.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">copyright:</th><td class="field-body">2016, Ninad Sathaye</td>
+</tr>
+<tr class="field-even field"><th class="field-name">license:</th><td class="field-body">The MIT License (MIT) . See LICENSE file for further details.</td>
+</tr>
+</tbody>
+</table>
+<dl class="class">
+<dt id="wargame.attackoftheorcs.AttackOfTheOrcs">
+<em class="property">class </em><code class="descclassname">wargame.attackoftheorcs.</code><code class="descname">AttackOfTheOrcs</code><a class="headerlink" href="#wargame.attackoftheorcs.AttackOfTheOrcs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Main class to play Attack of The Orcs game</p>
+<dl class="method">
+<dt id="wargame.attackoftheorcs.AttackOfTheOrcs.get_occupants">
+<code class="descname">get_occupants</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#wargame.attackoftheorcs.AttackOfTheOrcs.get_occupants" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a list of occupant types for all huts.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="wargame.attackoftheorcs.AttackOfTheOrcs.play">
+<code class="descname">play</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#wargame.attackoftheorcs.AttackOfTheOrcs.play" title="Permalink to this definition">¶</a></dt>
+<dd><p>Workhorse method to play the game.</p>
+<p>Controls the high level logic to play the game. This is called from
+the main program to begin the game execution.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="wargame.attackoftheorcs.AttackOfTheOrcs.show_game_mission">
+<code class="descname">show_game_mission</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#wargame.attackoftheorcs.AttackOfTheOrcs.show_game_mission" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print the game mission in the console</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-wargame.gameuniterror">
+<span id="wargame-gameuniterror-module"></span><h2>wargame.gameuniterror module<a class="headerlink" href="#module-wargame.gameuniterror" title="Permalink to this headline">¶</a></h2>
+<p>wargame.gameuniterror</p>
+<p>Shows how to create a custom exception class for the Attack of the Orcs game</p>
+<p>This module is compatible with Python 3.5.x. It contains
+supporting code for the book, Learning Python Application Development,
+Packt Publishing.</p>
+<p>The use of this module is illustrated in Chapter 2, exception handling.</p>
+<div class="section" id="running-the-program">
+<h3>RUNNING THE PROGRAM:<a class="headerlink" href="#running-the-program" title="Permalink to this headline">¶</a></h3>
+<p>This is NOT run as a standalone program. See <cite>wargame/attackoftheorcs.py</cite></p>
+<p># &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;
+# Alternate implementation where you subclass the custom exception,
+# GameUniError. The following code would eliminate the need of
+# maintaining an error_dict object in GameUnitError. See the chapter for
+# further details.
+# &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;
+# class GameUnitError(Exception):
+#     def __init__(self, message=&#8217;&#8216;):
+#         super().__init__(message)
+#         self.padding = &#8216;~&#8217;<a href="#id1"><span class="problematic" id="id2">*</span></a>50 + &#8216;
+&#8216;
+#         self.error_message = &#8221; Unspecified Error!&#8221;
+#
+# class HealthMeterException(GameUnitError):
+#     def __init__(self, message=&#8217;&#8216;):
+#         super().__init__(message)
+#         self.error_message = (self.padding +
+#                              &#8220;ERROR: Health Meter Problem&#8221; +
+#                              &#8216;
+&#8216; + self.padding )
+#
+# class AttackException(GameUnitError):
+#     # Code similar to that of HealthMeterException .
+#     pass</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><cite>wargame/attackoftheorcs.py</cite></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">copyright:</th><td class="field-body">2016, Ninad Sathaye</td>
+</tr>
+<tr class="field-even field"><th class="field-name">license:</th><td class="field-body">The MIT License (MIT) . See LICENSE file for further details.</td>
+</tr>
+</tbody>
+</table>
+<dl class="exception">
+<dt id="wargame.gameuniterror.GameUnitError">
+<em class="property">exception </em><code class="descclassname">wargame.gameuniterror.</code><code class="descname">GameUnitError</code><span class="sig-paren">(</span><em>message=''</em>, <em>code=0</em><span class="sig-paren">)</span><a class="headerlink" href="#wargame.gameuniterror.GameUnitError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">Exception</span></code></p>
+<p>Custom exceptions class for the <cite>AbstractGameUnit</cite> and its subclasses</p>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="module-wargame.gameutils">
+<span id="wargame-gameutils-module"></span><h2>wargame.gameutils module<a class="headerlink" href="#module-wargame.gameutils" title="Permalink to this headline">¶</a></h2>
+<p>wargame.gameutils</p>
+<p>This module contains some utility function for the game Attack of the Orcs</p>
+<p>This module is compatible with Python 3.5.x. It contains
+supporting code for the book, Learning Python Application Development,
+Packt Publishing.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">copyright:</th><td class="field-body">2016, Ninad Sathaye</td>
+</tr>
+<tr class="field-even field"><th class="field-name">license:</th><td class="field-body">The MIT License (MIT) . See LICENSE file for further details.</td>
+</tr>
+</tbody>
+</table>
+<dl class="function">
+<dt id="wargame.gameutils.print_bold">
+<code class="descclassname">wargame.gameutils.</code><code class="descname">print_bold</code><span class="sig-paren">(</span><em>msg</em>, <em>end='\n'</em><span class="sig-paren">)</span><a class="headerlink" href="#wargame.gameutils.print_bold" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convenience function to print a message in bold style</p>
+<p>Optionally you can also specify how the bold text should end. By default
+it ends with a new line character.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>msg</strong> &#8211; Message to be converted to bold style</li>
+<li><strong>end</strong> &#8211; Tell how the printed string should end (newline, space etc)</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="wargame.gameutils.weighted_random_selection">
+<code class="descclassname">wargame.gameutils.</code><code class="descname">weighted_random_selection</code><span class="sig-paren">(</span><em>obj1</em>, <em>obj2</em><span class="sig-paren">)</span><a class="headerlink" href="#wargame.gameutils.weighted_random_selection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Randomly return one of the following, obj1 or obj2</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>obj1</strong> &#8211; An instance of class AbstractGameUnit. It can
+be any object. The calling code should ensure the correct
+object is passed to this function.</li>
+<li><strong>obj2</strong> &#8211; Another instance of class AbstractGameUnit.
+See the comment for o</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">obj1 or obj2</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-wargame.hut">
+<span id="wargame-hut-module"></span><h2>wargame.hut module<a class="headerlink" href="#module-wargame.hut" title="Permalink to this headline">¶</a></h2>
+<p>wargame.hut</p>
+<p>This module contains the Hut class implementation.</p>
+<p>This module is compatible with Python 3.5.x. It contains
+supporting code for the book, Learning Python Application Development,
+Packt Publishing.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">copyright:</th><td class="field-body">2016, Ninad Sathaye</td>
+</tr>
+<tr class="field-even field"><th class="field-name">license:</th><td class="field-body">The MIT License (MIT) . See LICENSE file for further details.</td>
+</tr>
+</tbody>
+</table>
+<dl class="class">
+<dt id="wargame.hut.Hut">
+<em class="property">class </em><code class="descclassname">wargame.hut.</code><code class="descname">Hut</code><span class="sig-paren">(</span><em>number</em>, <em>occupant</em><span class="sig-paren">)</span><a class="headerlink" href="#wargame.hut.Hut" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Class to create hut objects in the game Attack of the Orcs</p>
+<dl class="method">
+<dt id="wargame.hut.Hut.acquire">
+<code class="descname">acquire</code><span class="sig-paren">(</span><em>new_occupant</em><span class="sig-paren">)</span><a class="headerlink" href="#wargame.hut.Hut.acquire" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update the occupant of this hut</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="wargame.hut.Hut.get_occupant_type">
+<code class="descname">get_occupant_type</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#wargame.hut.Hut.get_occupant_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a string giving info on the hut occupant</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-wargame.knight">
+<span id="wargame-knight-module"></span><h2>wargame.knight module<a class="headerlink" href="#module-wargame.knight" title="Permalink to this headline">¶</a></h2>
+<p>wargame.knight</p>
+<p>This module contains the Knight class implementation.</p>
+<p>This module is compatible with Python 3.5.x. It contains
+supporting code for the book, Learning Python Application Development,
+Packt Publishing.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">copyright:</th><td class="field-body">2016, Ninad Sathaye</td>
+</tr>
+<tr class="field-even field"><th class="field-name">license:</th><td class="field-body">The MIT License (MIT) . See LICENSE file for further details.</td>
+</tr>
+</tbody>
+</table>
+<dl class="class">
+<dt id="wargame.knight.Knight">
+<em class="property">class </em><code class="descclassname">wargame.knight.</code><code class="descname">Knight</code><span class="sig-paren">(</span><em>name='Sir Foo'</em><span class="sig-paren">)</span><a class="headerlink" href="#wargame.knight.Knight" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">abstractgameunit.AbstractGameUnit</span></code></p>
+<p>Class that represents the game character &#8216;Knight&#8217;</p>
+<p>The player instance in the game is a Knight instance. Other Knight
+instances are considered as &#8216;friends&#8217; of the player and is
+indicated by the attribute <cite>self.unit_type</cite> .</p>
+<dl class="method">
+<dt id="wargame.knight.Knight.acquire_hut">
+<code class="descname">acquire_hut</code><span class="sig-paren">(</span><em>hut</em><span class="sig-paren">)</span><a class="headerlink" href="#wargame.knight.Knight.acquire_hut" title="Permalink to this definition">¶</a></dt>
+<dd><p>&#8216;Fight&#8217; the combat (command line) to acquire the hut</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>hut</strong> (<a class="reference internal" href="#wargame.hut.Hut" title="wargame.hut.Hut"><em>Hut</em></a>) &#8211; The hut that needs to be acquired.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="wargame.knight.Knight.info">
+<code class="descname">info</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#wargame.knight.Knight.info" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print basic information about this character.</p>
+<p>Overrides AbstractGameUnit.info</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="wargame.knight.Knight.run_away">
+<code class="descname">run_away</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#wargame.knight.Knight.run_away" title="Permalink to this definition">¶</a></dt>
+<dd><p>Abandon the combat and run away from the hut</p>
+<p>If the player is losing the combat, there is an option
+to leave the hut. A strategy to rejuvenate and restart the combat
+for a better chance of winning.</p>
+<p>..seealso :: <code class="xref py py-meth docutils literal"><span class="pre">self.acquire_hut()</span></code></p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-wargame.orcrider">
+<span id="wargame-orcrider-module"></span><h2>wargame.orcrider module<a class="headerlink" href="#module-wargame.orcrider" title="Permalink to this headline">¶</a></h2>
+<p>wargame.orcrider</p>
+<p>This module contains the OrcRider class implementation.</p>
+<p>This module is compatible with Python 3.5.x. It contains
+supporting code for the book, Learning Python Application Development,
+Packt Publishing.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">copyright:</th><td class="field-body">2016, Ninad Sathaye</td>
+</tr>
+<tr class="field-even field"><th class="field-name">license:</th><td class="field-body">The MIT License (MIT) . See LICENSE file for further details.</td>
+</tr>
+</tbody>
+</table>
+<dl class="class">
+<dt id="wargame.orcrider.OrcRider">
+<em class="property">class </em><code class="descclassname">wargame.orcrider.</code><code class="descname">OrcRider</code><span class="sig-paren">(</span><em>name=''</em><span class="sig-paren">)</span><a class="headerlink" href="#wargame.orcrider.OrcRider" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">abstractgameunit.AbstractGameUnit</span></code></p>
+<p>Class that represents the game character</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">The class <cite>Knight</cite> and the superclass <cite>AbstractGameUnit</cite></p>
+</div>
+<dl class="method">
+<dt id="wargame.orcrider.OrcRider.info">
+<code class="descname">info</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#wargame.orcrider.OrcRider.info" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print basic information about this character.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-wargame">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-wargame" title="Permalink to this headline">¶</a></h2>
+<p>wargame.__init__</p>
+<p>This module is compatible with Python 3.5.x. It contains
+supporting code for the book, Learning Python Application Development,
+Packt Publishing.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">copyright:</th><td class="field-body">2016, Ninad Sathaye</td>
+</tr>
+<tr class="field-even field"><th class="field-name">license:</th><td class="field-body">The MIT License (MIT) . See LICENSE file for further details.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">wargame package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-wargame.abstractgameunit">wargame.abstractgameunit module</a></li>
+<li><a class="reference internal" href="#module-wargame.attackoftheorcs">wargame.attackoftheorcs module</a></li>
+<li><a class="reference internal" href="#module-wargame.gameuniterror">wargame.gameuniterror module</a><ul>
+<li><a class="reference internal" href="#running-the-program">RUNNING THE PROGRAM:</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-wargame.gameutils">wargame.gameutils module</a></li>
+<li><a class="reference internal" href="#module-wargame.hut">wargame.hut module</a></li>
+<li><a class="reference internal" href="#module-wargame.knight">wargame.knight module</a></li>
+<li><a class="reference internal" href="#module-wargame.orcrider">wargame.orcrider module</a></li>
+<li><a class="reference internal" href="#module-wargame">Module contents</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/wargame.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, zmm064.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.5.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.9</a>
+      
+      |
+      <a href="_sources/wargame.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
